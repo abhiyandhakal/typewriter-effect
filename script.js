@@ -20,13 +20,13 @@ function loop() {
 
 	if (i < phrase.length && !isCompleted) {
 		i++;
-		partPhrase = phrase.slice(0, i + 1);
+		partPhrase = phrase.slice(0, i + 1) + '|';
 
 		if (i === phrase.length) isEnd = true;
 	} else if (i >= 0) {
 		isCompleted = true;
 		i--;
-		partPhrase = phrase.slice(0, i + 1);
+		partPhrase = phrase.slice(0, i + 1) + '|';
 	} else {
 		isCompleted = false;
 		i++;
